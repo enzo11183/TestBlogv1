@@ -1,0 +1,14 @@
+<!--templates/blog/blog_detail.html-->
+{% extends 'base.html' %}
+{% block container %}
+<div class="row">
+    <div class="card">
+        <h5 class="card-header">{{ post.title }} yazar: <span class="text-primary">{{ post.author }}</span></h5>
+        <div class="card-body">
+            <h5 class="card-title">Yayin Tarihi: {{ post.publish }}</h5>
+            <br>
+            <p class="card-text">{{ post.body }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

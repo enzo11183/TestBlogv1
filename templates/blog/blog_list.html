@@ -1,0 +1,18 @@
+<!--templates/blog/blog_list.html-->
+{% extends 'base.html' %}
+{% block container %}
+<div class="row">
+    {% for post in posts %}
+    <div class="col-sm-6 mt-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <h6 class="card-title">Gonderen: {{ post.author}}</h6>
+                <p class="card-text">{{ post.body | truncatechars:75 }}</p>
+                <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Devamini oku</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
