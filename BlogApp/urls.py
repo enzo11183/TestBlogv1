@@ -9,5 +9,7 @@ urlpatterns = [
     # post views
     path('', RedirectView.as_view(url='/main'), name='index'),
     path('main/', BlogListView.as_view(), name='blog_list'),
+    path('home/', views.HomePage, name='home'),
     path('<slug:slug>/', BlogDetailView.as_view(), name='blog_detail'),
+    
 ]

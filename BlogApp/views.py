@@ -2,7 +2,12 @@ from django.shortcuts import render
 
 # Create your views here.
 from .models import Post
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
+
+def HomePage(request):
+    context = {}
+    return render(request, 'home.html', context)
+
 
 class BlogListView(ListView):
     model = Post
