@@ -7,9 +7,10 @@ from django.views.generic import RedirectView
 app_name = 'BlogApp'
 urlpatterns = [
     # post views
-    path('', RedirectView.as_view(url='/main'), name='index'),
+    path('', RedirectView.as_view(url='main'), name='main'),
     path('main/', BlogListView.as_view(), name='blog_list'),
-    path('home/', views.HomePage, name='home'),
+    path('create/', views.createPage, name='create'),
+    path('kaydet/',views.kaydet, name = 'kaydet'),
     path('<slug:slug>/', BlogDetailView.as_view(), name='blog_detail'),
     
 ]

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block container %}
+
+<h1>Post Olustur</h1>
+<br>
+
+<form method="POST" , action="/kaydet/">
+    {% csrf_token %}
+    <label for="baslik">Post Baslik: </label><br>
+    <textarea name="baslik" rows="2" cols="20"></textarea><br>
+
+    <label for="slug">Slug: </label><br>
+    <textarea name="slug" rows="2" cols="20"></textarea><br>
+
+
+    <label for="tmetin">Post Icerigi: </label><br>
+    <textarea name="tmetin" rows="20" cols="50"></textarea><br>
+
+
+    <input type="submit" />
+</form>
+
+{% endblock %}
